@@ -1,5 +1,6 @@
 import React from 'react'
 import {Component} from 'react'
+import { Button } from 'reactstrap';
 
 
 class Search extends Component {
@@ -69,6 +70,7 @@ class Search extends Component {
                         <div className="input-field col s6">
                                 <input id="input_text" type="text" style={this.textStyle} onChange={this.handleChange} value={this.state.search}/>
                                 <label htmlFor="input_text" id="input_label" className="active">Movie Name</label>
+                                {this.state.search?<Button outline color="primary" onClick={this.handleSubmit}>Let's Go</Button>:''}
                         </div>
                      </div>
                 </form>
